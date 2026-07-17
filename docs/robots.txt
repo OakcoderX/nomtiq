@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oakcoderx.github.io/nomtiq/sitemap.xml

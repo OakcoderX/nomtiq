@@ -1,0 +1,17 @@
+# Publisher-only growth research is not part of the restaurant skill.
+PROMOTION_RESEARCH.md
+promotion-cases/
+scripts/collect_promotion_cases.py
+
+# Community publishing/monitoring is intentionally split from Nomtiq core.
+scripts/moltbook.py
+scripts/moltbook_monitor.py
+data/moltbook-daily.json
+data/rate_limit.json
+
+# Historical developer notes and local install/cache state.
+UPGRADES.md
+CHANGELOG.md
+.clawhub/
+__pycache__/
+*.pyc

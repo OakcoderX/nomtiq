@@ -1,0 +1,50 @@
+name: Restaurant recommendation feedback
+description: Report activation, setup, or recommendation-quality feedback without sharing secrets.
+title: "[Feedback] "
+labels: [feedback]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Skill did not activate
+        - Setup or API key guidance
+        - Search routing
+        - Recommendation quality
+        - Privacy or security
+        - Documentation
+    validations:
+      required: true
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Exact user prompt
+      description: Remove names, precise home/work locations, API keys, and other private data.
+      placeholder: Find a quiet date-night restaurant near Shibuya...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: input
+    id: agent
+    attributes:
+      label: Agent/client and Nomtiq version
+      placeholder: Codex / Claude Code / OpenClaw; Nomtiq 0.5.2
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed API keys, private locations, personal dining history, and other sensitive data.
+          required: true

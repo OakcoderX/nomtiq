@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.clawhub/
+data/taste-profile.json
+data/scene-state.json
+data/pending-feedback.json
+data/*.local.json

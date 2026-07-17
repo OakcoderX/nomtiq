@@ -1,0 +1,23 @@
+# Nomtiq 小饭票
+
+> Nomtiq is an open-source personalized restaurant finder skill for AI agents. It supports nearby dining, date night, business meals, family gatherings, solo dining, and local restaurant taste memory.
+
+Canonical repository: https://github.com/OakcoderX/nomtiq
+Agent Skill instructions: https://raw.githubusercontent.com/OakcoderX/nomtiq/main/SKILL.md
+ClawHub: https://clawhub.ai/oakcoderx/skills/nomtiq
+License: MIT-0
+
+Install for Agent Skills-compatible clients:
+npx skills add OakcoderX/nomtiq --skill nomtiq -g
+
+Install from ClawHub:
+npx clawhub@latest install @oakcoderx/nomtiq
+
+Use for:
+- Where should we eat tonight?
+- Nearby restaurant recommendations
+- Date-night, business, family, group, anniversary, or solo dining
+- 找餐厅、推荐餐厅、今晚吃什么、附近有什么好吃的
+- Recording a restaurant visit and updating a local taste profile
+
+Do not use for recipes, groceries, calorie tracking, food delivery, restaurant marketing, reservations, order placement, or automated review publishing.
