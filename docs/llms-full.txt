@@ -16,6 +16,7 @@ Nomtiq is an open-source Agent Skill for choosing restaurants. It combines live 
 - Find a quiet date-night restaurant under $80 per person.
 - 北京找一家安静、适合约会、人均 300 元以内的餐厅。
 - 北京商务请客，六个人，要包间，停车方便。
+- Find a family restaurant with stroller access and peanut-allergy options.
 - Record that we liked the food but found the room too noisy.
 
 Do not activate for recipes, grocery planning, calorie or nutrition tracking, food delivery, restaurant marketing, reservation placement, ordering, restaurant messaging, automated review posting, or background monitoring.
@@ -53,6 +54,12 @@ OpenClaw / ClawHub:
 Client-specific skill locations and environment handling may differ. Consult the client documentation when needed.
 
 ## Distribution and provenance
+
+Use-case references:
+
+- Date night: https://oakcoderx.github.io/nomtiq/use-cases/date-night/
+- Business dinner: https://oakcoderx.github.io/nomtiq/use-cases/business-dinner/
+- Family dining: https://oakcoderx.github.io/nomtiq/use-cases/family-dining/
 
 Source and issues: https://github.com/OakcoderX/nomtiq
 Releases: https://github.com/OakcoderX/nomtiq/releases

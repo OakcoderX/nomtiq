@@ -44,6 +44,10 @@ Find a relaxed date-night restaurant near Shibuya, around ¥8,000 per person.
 北京商务请客，6 个人，需要包间、停车方便。
 ```
 
+```text
+Find a family restaurant with stroller access and peanut-allergy options.
+```
+
 Nomtiq returns a **2+1**: two well-supported fits and one clearly labeled exploration choice. Each recommendation explains why it fits the people, budget, location, and occasion.
 
 ## What makes it different
@@ -80,6 +84,7 @@ Nomtiq follows the open [Agent Skills specification](https://agentskills.io/): t
 - [Discovery, triggers, and safety for AI agents](https://oakcoderx.github.io/nomtiq/for-agents/)
 - [Date-night restaurant use case](https://oakcoderx.github.io/nomtiq/use-cases/date-night/)
 - [Business-dinner restaurant use case](https://oakcoderx.github.io/nomtiq/use-cases/business-dinner/)
+- [Family-friendly restaurant use case](https://oakcoderx.github.io/nomtiq/use-cases/family-dining/)
 - [中文介绍：AI 找餐厅与餐厅推荐 Skill](https://oakcoderx.github.io/nomtiq/zh/)
 - [Project landing page](https://oakcoderx.github.io/nomtiq/)
 - [ClawHub release](https://clawhub.ai/oakcoderx/skills/nomtiq)

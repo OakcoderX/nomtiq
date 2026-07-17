@@ -121,9 +121,21 @@ def main() -> int:
             errors.append(f"{page}: missing JSON-LD")
         for payload in parser.json_ld:
             try:
-                json.loads(payload)
+                structured_data = json.loads(payload)
             except json.JSONDecodeError as exc:
                 errors.append(f"{page}: invalid JSON-LD: {exc}")
+                continue
+            nodes = structured_data.get("@graph", []) if isinstance(structured_data, dict) else []
+            if isinstance(structured_data, dict) and structured_data.get("@type") == "Article":
+                nodes = [structured_data]
+            for node in nodes:
+                if not isinstance(node, dict) or node.get("@type") != "Article":
+                    continue
+                author = node.get("author", {})
+                if not isinstance(author, dict) or not author.get("name") or not author.get("url"):
+                    errors.append(f"{page}: Article JSON-LD needs author name and URL")
+                if not node.get("datePublished") or not node.get("dateModified"):
+                    errors.append(f"{page}: Article JSON-LD needs publication and modification dates")
         for href in parser.links:
             target = local_target(page, href)
             if target is not None and not target.exists():
