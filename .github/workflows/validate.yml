@@ -1,0 +1,42 @@
+name: Validate Agent Skill
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Compile Python scripts
+        run: python -m compileall -q scripts
+      - name: Verify missing-key setup flow
+        run: env -u AMAP_WEBSERVICE_KEY -u SERPER_API_KEY python scripts/doctor.py
+      - name: Verify Agent Skills discovery
+        run: npx -y skills@latest add . --list | tee /tmp/nomtiq-skills-list.txt && grep -q "nomtiq" /tmp/nomtiq-skills-list.txt
+      - name: Enforce core boundary
+        run: |
+          if grep -RniE 'moltbook|MOLTBOOK_API_KEY|collect_promotion_cases|promotion-cases|subprocess\.Popen' SKILL.md AGENT_GUIDE.md scripts data; then
+            echo "Forbidden publisher/community behavior found in the core skill"
+            exit 1
+          fi
+      - name: Check for obvious committed secrets
+        run: |
+          if grep -RniE '(sk-[A-Za-z0-9_-]{20,}|[0-9a-fA-F]{32,})' SKILL.md AGENT_GUIDE.md README.md scripts data; then
+            echo "Potential secret-like value found"
+            exit 1
+          fi
