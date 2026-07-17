@@ -5,6 +5,7 @@ __pycache__/
 .agents/
 .claude/skills/
 .cursor/skills/
+skills-lock.json
 data/taste-profile.json
 data/scene-state.json
 data/pending-feedback.json
