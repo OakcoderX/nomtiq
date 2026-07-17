@@ -1,22 +1,35 @@
 ---
 name: nomtiq
 description: "Nomtiq 小饭票 is a personalized restaurant finder with local dining memory. Use when the user asks where to eat, wants nearby restaurant recommendations, date-night, business, family or solo dining, says 找餐厅、推荐餐厅、今晚吃什么、附近有什么好吃的, or wants to record a restaurant visit and update a local taste profile. Searches Amap in mainland China and Google Maps via Serper elsewhere, then gives 2+1 recommendations based on taste, budget, location, party size and occasion. Memory is limited to local restaurant preferences and feedback. Do not use for recipes, groceries, calorie tracking or food delivery."
-version: "0.5.2"
-author: oak lee
 license: MIT-0
-homepage: https://clawhub.ai/oakcoderx/skills/nomtiq
 compatibility: "Requires Python 3.9+, network access, and a user-provided Amap or Serper API key for live search. Stores the user's restaurant taste profile locally."
-tags: [restaurant, dining, personalized-recommendation, date-night, nearby, food, global, 美食, 找餐厅, 推荐餐厅, 口味画像]
 metadata:
+  author: oak lee
+  version: "0.5.2"
+  homepage: https://github.com/OakcoderX/nomtiq
+  tags:
+    - restaurant
+    - dining
+    - personalized-recommendation
+    - date-night
+    - nearby
+    - food
+    - global
+    - 美食
+    - 找餐厅
+    - 推荐餐厅
+    - 口味画像
   openclaw:
     emoji: "🎫"
     homepage: https://clawhub.ai/oakcoderx/skills/nomtiq
     requires:
-      bins: ["python3"]
+      bins:
+        - python3
     install:
       - id: python3
         kind: system
-        bins: ["python3"]
+        bins:
+          - python3
         label: "Python 3 (system)"
     external_calls:
       - url: https://restapi.amap.com

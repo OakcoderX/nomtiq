@@ -2,6 +2,9 @@ __pycache__/
 *.py[cod]
 .DS_Store
 .clawhub/
+.agents/
+.claude/skills/
+.cursor/skills/
 data/taste-profile.json
 data/scene-state.json
 data/pending-feedback.json
