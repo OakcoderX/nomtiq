@@ -28,6 +28,8 @@ jobs:
         run: env -u AMAP_WEBSERVICE_KEY -u SERPER_API_KEY python scripts/doctor.py
       - name: Verify Agent Skills discovery
         run: npx -y skills@latest add . --list | tee /tmp/nomtiq-skills-list.txt && grep -q "nomtiq" /tmp/nomtiq-skills-list.txt
+      - name: Validate SEO pages and sitemap
+        run: python .github/scripts/validate_seo.py
       - name: Enforce core boundary
         run: |
           if grep -RniE 'moltbook|MOLTBOOK_API_KEY|collect_promotion_cases|promotion-cases|subprocess\.Popen' SKILL.md AGENT_GUIDE.md scripts data; then
