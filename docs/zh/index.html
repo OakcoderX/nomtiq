@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nomtiq 小饭票 — 开源 AI 找餐厅与餐厅推荐 Skill</title>
+  <meta name="description" content="Nomtiq 小饭票是一款开源 AI 找餐厅 Skill，支持附近美食、约会餐厅、商务请客和家庭聚餐，并在本地保存个人口味偏好。">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <link rel="canonical" href="https://oakcoderx.github.io/nomtiq/zh/">
+  <link rel="alternate" hreflang="en" href="https://oakcoderx.github.io/nomtiq/">
+  <link rel="alternate" hreflang="zh-CN" href="https://oakcoderx.github.io/nomtiq/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://oakcoderx.github.io/nomtiq/">
+  <link rel="stylesheet" href="../assets/site.css">
+  <meta property="og:type" content="website"><meta property="og:title" content="Nomtiq 小饭票 — 开源 AI 找餐厅 Skill"><meta property="og:description" content="让 AI 根据地点、预算、对象和场景，实时搜索并解释为什么推荐这家餐厅。"><meta property="og:url" content="https://oakcoderx.github.io/nomtiq/zh/"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://opengraph.githubassets.com/1/OakcoderX/nomtiq"><meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Nomtiq 小饭票 — 开源 AI 找餐厅与餐厅推荐 Skill","description":"支持实时搜索与本地口味记忆的开源 AI 餐厅推荐技能。","url":"https://oakcoderx.github.io/nomtiq/zh/","inLanguage":"zh-CN","isPartOf":{"@type":"WebSite","name":"Nomtiq 小饭票","url":"https://oakcoderx.github.io/nomtiq/"}}</script>
+</head>
+<body>
+  <nav class="site-nav"><div class="wrap"><a class="brand" href="../">Nomtiq 小饭票</a><div class="nav-links"><a href="../install/">安装</a><a href="../for-agents/">Agent 接入</a><a href="../use-cases/date-night/">约会用例</a><a href="./" aria-current="page">中文</a><a href="https://github.com/OakcoderX/nomtiq">GitHub</a></div></div></nav>
+  <header class="hero compact"><div class="wrap"><div class="breadcrumbs"><a href="../">Nomtiq</a> / 中文</div><div class="eyebrow">开源 AI 餐厅推荐技能</div><h1>不是再给你一份榜单，而是帮你选对这一顿</h1><p class="lead"><strong>Nomtiq 小饭票</strong>让兼容 Agent Skills 的 AI 根据地点、预算、同行的人和用餐场景，实时寻找餐厅，并在本地记住真实反馈。</p><div class="actions"><a class="button primary" href="../install/">查看安装方法</a><a class="button" href="https://github.com/OakcoderX/nomtiq">查看 GitHub 源码</a></div></div></header>
+  <main>
+    <section><div class="wrap grid"><article class="card wide"><h2>一句话安装</h2><pre><code>npx skills add OakcoderX/nomtiq --skill nomtiq -g</code></pre><p>OpenClaw 用户也可以通过 ClawHub 安装。需要实时搜索中国大陆餐厅时配置高德 Web Service Key；搜索海外目的地时配置 Serper Key。密钥只应放在环境变量或密钥管理器里。</p></article><article class="card"><h3>它适合什么问题？</h3><p>“今晚吃什么”“附近有什么好吃的”“约会去哪里”“商务请客选哪家”“带孩子聚餐”“一个人吃饭”等需要做餐厅选择的问题。</p></article></div></section>
+    <section><div class="wrap grid"><article class="card"><h3>约会餐厅</h3><p>考虑安静程度、聊天便利、预算、交通和气氛，不把“最适合拍照”误当成“最适合两个人”。</p></article><article class="card"><h3>商务请客</h3><p>结合人数、包间、停车、正式程度、菜系禁忌和时间安排，减少临场风险。</p></article><article class="card"><h3>家庭与多人聚餐</h3><p>把老人、孩子、忌口、座位和共享菜需求当成明确约束，而不是搜索后的附加项。</p></article><article class="card wide"><h3>它怎么给结果？</h3><p>Nomtiq 先补齐真正影响选择的信息，再进行实时搜索和约束核对，最后给出“2+1”：两个证据充分的匹配项，加一个明确标注为探索选项的候选。每个结果都说明适合原因、取舍和需要再次确认的信息。</p></article><article class="card"><h3>本地口味记忆</h3><p>吃完后可以记录“菜很好，但环境太吵”一类反馈。口味画像保存在本地，不自动发评论。</p></article></div></section>
+    <section><div class="wrap prose"><h2>示例</h2><div class="example"><p>北京找一家安静、适合约会、人均 300 元以内的餐厅。不要纯拍照网红店，最好方便聊天。</p></div><p>这类提示同时给出了城市、场景、预算和重要偏好。如果城市范围太大，Agent 应先追问商圈或交通范围；如果实时数据无法确认噪声、价格或营业时间，也必须明确说不确定，而不是编造。</p><p><a href="../use-cases/date-night/">查看完整约会餐厅选择逻辑 →</a></p></div></section>
+    <section><div class="wrap grid"><article class="card wide"><h2>明确的能力边界</h2><p>小饭票负责餐厅选择和本地反馈记录，不负责菜谱、买菜、热量追踪、外卖下单、餐厅营销、自动发评价，也不会擅自订位或联系餐厅。</p></article><article class="card"><h3>给 Agent 看</h3><p><a href="../for-agents/">查看触发条件、安全边界和权威数据源</a>，或直接读取仓库根目录的 <a href="https://raw.githubusercontent.com/OakcoderX/nomtiq/main/SKILL.md">SKILL.md</a>。</p></article></div></section>
+  </main>
+  <footer><div class="wrap">Nomtiq 小饭票 · 一顿饭，是一个瞬间 · <a href="../">English</a> · <a href="../llms.txt">llms.txt</a></div></footer>
+</body></html>

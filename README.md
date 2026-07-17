@@ -76,8 +76,11 @@ Nomtiq follows the open [Agent Skills specification](https://agentskills.io/): t
 
 - [Agent workflow and activation rules](SKILL.md)
 - [Detailed operating guide](AGENT_GUIDE.md)
-- [Beijing date-night example](https://oakcoderx.github.io/nomtiq/#example)
-- [Search-friendly landing page](https://oakcoderx.github.io/nomtiq/)
+- [Installation and provider setup](https://oakcoderx.github.io/nomtiq/install/)
+- [Discovery, triggers, and safety for AI agents](https://oakcoderx.github.io/nomtiq/for-agents/)
+- [Date-night restaurant use case](https://oakcoderx.github.io/nomtiq/use-cases/date-night/)
+- [中文介绍：AI 找餐厅与餐厅推荐 Skill](https://oakcoderx.github.io/nomtiq/zh/)
+- [Project landing page](https://oakcoderx.github.io/nomtiq/)
 - [ClawHub release](https://clawhub.ai/oakcoderx/skills/nomtiq)
 
 ## FAQ

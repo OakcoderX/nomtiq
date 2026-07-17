@@ -1,23 +1,31 @@
 # Nomtiq 小饭票
 
-> Nomtiq is an open-source personalized restaurant finder skill for AI agents. It supports nearby dining, date night, business meals, family gatherings, solo dining, and local restaurant taste memory.
+> Nomtiq is an open-source personalized restaurant finder skill for AI agents. It supports nearby dining, date night, business meals, family gatherings, solo dining, and private local restaurant taste memory.
 
-Canonical repository: https://github.com/OakcoderX/nomtiq
-Agent Skill instructions: https://raw.githubusercontent.com/OakcoderX/nomtiq/main/SKILL.md
-ClawHub: https://clawhub.ai/oakcoderx/skills/nomtiq
-License: MIT-0
+## Canonical sources
 
-Install for Agent Skills-compatible clients:
-npx skills add OakcoderX/nomtiq --skill nomtiq -g
+- [Source repository](https://github.com/OakcoderX/nomtiq)
+- [Agent Skill instructions](https://raw.githubusercontent.com/OakcoderX/nomtiq/main/SKILL.md)
+- [Versioned releases](https://github.com/OakcoderX/nomtiq/releases)
+- [Full agent-oriented reference](https://oakcoderx.github.io/nomtiq/llms-full.txt)
+- [License](https://github.com/OakcoderX/nomtiq/blob/main/LICENSE): MIT-0
 
-Install from ClawHub:
-npx clawhub@latest install @oakcoderx/nomtiq
+## Documentation
 
-Use for:
-- Where should we eat tonight?
-- Nearby restaurant recommendations
-- Date-night, business, family, group, anniversary, or solo dining
-- 找餐厅、推荐餐厅、今晚吃什么、附近有什么好吃的
-- Recording a restaurant visit and updating a local taste profile
+- [Overview](https://oakcoderx.github.io/nomtiq/)
+- [Installation and setup](https://oakcoderx.github.io/nomtiq/install/)
+- [Discovery, triggers, and safety for AI agents](https://oakcoderx.github.io/nomtiq/for-agents/)
+- [Date-night restaurant use case](https://oakcoderx.github.io/nomtiq/use-cases/date-night/)
+- [中文介绍](https://oakcoderx.github.io/nomtiq/zh/)
 
-Do not use for recipes, groceries, calorie tracking, food delivery, restaurant marketing, reservations, order placement, or automated review publishing.
+## Install
+
+Agent Skills-compatible clients:
+
+    npx skills add OakcoderX/nomtiq --skill nomtiq -g
+
+OpenClaw / ClawHub:
+
+    npx clawhub@latest install @oakcoderx/nomtiq
+
+Use Nomtiq for restaurant-selection decisions such as nearby dining, date night, business meals, family dining, anniversaries, solo meals, and recording visit feedback. Do not use it for recipes, groceries, calorie tracking, food delivery, restaurant marketing, reservations, ordering, messaging, or automated review publishing.

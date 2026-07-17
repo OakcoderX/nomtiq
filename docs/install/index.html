@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Install Nomtiq AI Restaurant Finder Skill</title>
+  <meta name="description" content="Install the Nomtiq restaurant finder skill in Agent Skills-compatible clients or OpenClaw, configure Amap or Serper, and verify the setup.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <link rel="canonical" href="https://oakcoderx.github.io/nomtiq/install/">
+  <link rel="stylesheet" href="../assets/site.css">
+  <meta property="og:type" content="article"><meta property="og:title" content="Install Nomtiq AI Restaurant Finder Skill"><meta property="og:description" content="One-command install, provider setup, and a safe first test."><meta property="og:url" content="https://oakcoderx.github.io/nomtiq/install/"><meta property="og:image" content="https://opengraph.githubassets.com/1/OakcoderX/nomtiq"><meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Install Nomtiq AI Restaurant Finder Skill","description":"Installation and setup guide for the Nomtiq Agent Skill.","url":"https://oakcoderx.github.io/nomtiq/install/","dateModified":"2026-07-18","author":{"@type":"Person","name":"OakcoderX","url":"https://github.com/OakcoderX"},"isPartOf":{"@type":"WebSite","name":"Nomtiq 小饭票","url":"https://oakcoderx.github.io/nomtiq/"}}</script>
+</head>
+<body>
+  <nav class="site-nav"><div class="wrap"><a class="brand" href="../">Nomtiq 小饭票</a><div class="nav-links"><a href="./" aria-current="page">Install</a><a href="../for-agents/">For AI agents</a><a href="../use-cases/date-night/">Use case</a><a href="../zh/" lang="zh-CN">中文</a><a href="https://github.com/OakcoderX/nomtiq">GitHub</a></div></div></nav>
+  <header class="hero compact"><div class="wrap"><div class="breadcrumbs"><a href="../">Nomtiq</a> / Install</div><div class="eyebrow">Installation guide</div><h1>Install the Nomtiq restaurant finder skill</h1><p class="lead">Add the skill, configure one search provider for the restaurant destination, and test it without exposing an API key.</p></div></header>
+  <main>
+    <section><div class="wrap prose"><ol class="steps">
+      <li><h2>Install from GitHub</h2><p>For an Agent Skills-compatible client:</p><pre><code>npx skills add OakcoderX/nomtiq --skill nomtiq -g</code></pre><p>To inspect the skill before installing, open the public <a href="https://github.com/OakcoderX/nomtiq">GitHub repository</a> or read its <a href="https://raw.githubusercontent.com/OakcoderX/nomtiq/main/SKILL.md">raw SKILL.md</a>.</p></li>
+      <li><h2>Or install in OpenClaw</h2><pre><code>npx clawhub@latest install @oakcoderx/nomtiq</code></pre><p>The GitHub release is the canonical source for the current public code. The <a href="https://clawhub.ai/oakcoderx/skills/nomtiq">ClawHub listing</a> is the OpenClaw distribution channel.</p></li>
+      <li><h2>Choose a live-search provider</h2><p>Provider choice follows the destination, not the language of the prompt:</p><ul class="fact-list"><li><strong>Mainland China:</strong> set <code>AMAP_WEBSERVICE_KEY</code> for Amap Web Service.</li><li><strong>Outside mainland China:</strong> set <code>SERPER_API_KEY</code> for Google Maps results through Serper.</li></ul><p>Put credentials in the agent process environment or a secret manager. Do not paste keys into prompts, source files, screenshots, command arguments, or logs.</p></li>
+      <li><h2>Run the setup check</h2><pre><code>python3 scripts/doctor.py</code></pre><p>If no supported key is present, the doctor returns a setup-required result and explains what to configure. It should not print a secret value.</p></li>
+      <li><h2>Try a bounded first prompt</h2><pre><code>Find a quiet date-night restaurant near Shibuya, around ¥8,000 per person, where we can talk.</code></pre><p>A useful answer should explain why each result fits the location, budget, group, and occasion. See the <a href="../use-cases/date-night/">date-night workflow</a> for a fuller example.</p></li>
+    </ol></div></section>
+    <section><div class="wrap grid"><article class="card wide"><h2>Supported clients</h2><p>Nomtiq uses the portable Agent Skills directory format: a root <code>SKILL.md</code> plus scripts and reference material. Installation details still vary by client, so consult the client’s own documentation when its skill directory or environment handling differs.</p></article><article class="card"><h3>Need agent-facing details?</h3><p>Read <a href="../for-agents/">how an AI agent should discover, activate, and safely use Nomtiq</a>.</p></article></div></section>
+  </main>
+  <footer><div class="wrap"><a href="../">Nomtiq home</a> · <a href="https://github.com/OakcoderX/nomtiq/releases">Releases</a> · <a href="../llms.txt">llms.txt</a></div></footer>
+</body></html>
